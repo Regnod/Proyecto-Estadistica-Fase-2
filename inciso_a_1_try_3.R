@@ -6,9 +6,9 @@ data$Draft.pick <-NULL
 data$Bench <- NULL
 attach(data)
 
-# este da 0.8865
+# este es el que mejor adjusted R squared da (0.9999), pero no cumple los supuestos
 multi.fit = lm(data$Vertical..Max.Reach.~data$Height..No.Shoes.+data$Height..With.Shoes.+data$Standing.reach+data$Vertical..Max.
-+data$Vertical..No.Step., data = data)
++data$Vertical..No.Step.+data$Vertical..No.Step.Reach., data = data)
 summary(multi.fit)
 
 mean(multi.fit$residuals)

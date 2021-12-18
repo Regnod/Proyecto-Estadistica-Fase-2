@@ -6,9 +6,9 @@ data$Draft.pick <-NULL
 data$Bench <- NULL
 attach(data)
 
-# este da 0.8865
-multi.fit = lm(data$Vertical..Max.Reach.~data$Height..No.Shoes.+data$Height..With.Shoes.+data$Standing.reach+data$Vertical..Max.
-+data$Vertical..No.Step., data = data)
+# este da 0.89... y cumple los supuestos de los Residuos
+multi.fit = lm(data$Vertical..Max.Reach.~data$Vertical..No.Step.Reach.+data$Vertical..Max.
+, data = data)
 summary(multi.fit)
 
 mean(multi.fit$residuals)
