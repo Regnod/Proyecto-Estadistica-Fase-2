@@ -5,7 +5,7 @@ data2014 <- read.csv("2014_nba_draft_combine.csv")
 data2015 <- read.csv("2015_nba_draft_combine.csv")
 
 
-
+## found a Shaphiro test working using the original data deleting the uncomplete rows, using the fixed ones fails by a slight edge
 variable <- c(rep('Weight 2012',49), rep('Weight 2014', 49), rep('Weight 2015', 49))
 wear <- c(data2012$Weight, data2014$Weight, data2015$Weight)
 
