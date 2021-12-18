@@ -4,15 +4,11 @@ data$Year <- NULL
 data$Player <- NULL
 data$Draft.pick <-NULL
 data$Bench <- NULL
-# data <- data.frame(scale(data))
 attach(data)
-correlation_matrix <- cor(data)
-correlation_matrix
 
-# multi.fit = lm(data$Wingspan~data$Hand..Length.*data$Hand..Width., data = data)
-multi.fit = lm(data$Vertical..Max.Reach.~data$Vertical..No.Step.Reach.+data$Vertical..Max.
-, data = data)
-summary(multi.fit)
+# este da 0.8865
+multi.fit = lm(data$Vertical..Max.Reach.~data$Height..No.Shoes.+data$Height..With.Shoes.+data$Standing.reach+data$Vertical..Max.
++data$Vertical..No.Step., data = data)
 
 mean(multi.fit$residuals)
 sum(multi.fit$residuals)
@@ -37,10 +33,10 @@ ylab = "Standarized Resid",
 ylim = c(-2.5, 2.5))
 abline(h=0,lty=2)
 plot(Vertical..Max.Reach., res, 
-main = "Residuales contra Vertical (Max Reach)",
-xlab = "Vertical (Max Reach)", ylab="Residuos")
+main = "Residuals Vs Vertical (Max Reach)",
+xlab = "Vertical (Max Reach)", ylab="Residuals")
 abline(h=0, lty=2)
-hist(res, main = "Histograma de residuos")
+hist(res, main = "Histogram of Residuals")
 
 qqnorm(res)
 qqline(res)
