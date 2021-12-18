@@ -12,9 +12,6 @@ variable <- c(rep('Vertical (Max Reach) 2012',59), rep('Vertical (Max Reach) 201
 wear <- c(data2012$Vertical..Max.Reach., data2014$Vertical..Max.Reach., data2015$Vertical..Max.Reach.)
 
 
-# variable <- c(rep('Vertical (Max)',59), rep('Vertical (No Step Reach)', 59))
-# wear <- c(data$Vertical..Max., data$Vertical..No.Step.Reach.)
-
 df <- data.frame(variable, wear)
 
 boxplot(wear~variable, data=df)
@@ -22,7 +19,6 @@ variable.anova <- aov(wear~variable, data=df)
 summary(variable.anova)
 
 residuals <- variable.anova$residuals
-# plot(variable.anova$residuals)
 
 scaled_residuals <- scale(variable.anova$residuals)
 plot(scaled_residuals)
