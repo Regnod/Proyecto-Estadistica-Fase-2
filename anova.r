@@ -1,10 +1,16 @@
 library(lmtest)
-data2012 <- read.csv("2012_nba_draft_combine.csv")
-data2013 <- read.csv("2013_nba_draft_combine.csv")
-data2014 <- read.csv("2014_nba_draft_combine.csv")
+data2012 <- read.csv("2012_nba_draft_combine_fixed.csv")
+data2013 <- read.csv("2013_nba_draft_combine_fixed.csv")
+data2014 <- read.csv("2014_nba_draft_combine_fixed.csv")
+data2015 <- read.csv("2015_nba_draft_combine_fixed.csv")
 
-variable <- c(rep('Vertical (Max Reach) 2012',59), rep('Vertical (Max Reach) 2013', 59), rep('Vertical (Max Reach) 2014', 59))
-wear <- c(data2012$Vertical..Max.Reach., data2013$Vertical..Max.Reach., data2014$Vertical..Max.Reach.)
+# variable <- c(rep('Vertical (Max Reach) 2012',49), rep('Vertical (Max Reach) 2013', 49), rep('Vertical (Max Reach) 2014', 49), rep('Vertical (Max Reach) 2015', 49))
+# wear <- c(data2012$Vertical..Max.Reach., data2013$Vertical..Max.Reach., data2014$Vertical..Max.Reach., data2015$Vertical..Max.Reach.)
+
+
+variable <- c(rep('Vertical (Max Reach) 2012',59), rep('Vertical (Max Reach) 2014', 59), rep('Vertical (Max Reach) 2015', 59))
+wear <- c(data2012$Vertical..Max.Reach., data2014$Vertical..Max.Reach., data2015$Vertical..Max.Reach.)
+
 
 # variable <- c(rep('Vertical (Max)',59), rep('Vertical (No Step Reach)', 59))
 # wear <- c(data$Vertical..Max., data$Vertical..No.Step.Reach.)

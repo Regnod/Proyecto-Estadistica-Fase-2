@@ -1,5 +1,5 @@
-data <- read.csv("./2013_nba_draft_combine.csv")
+data <- read.csv("./2015_nba_draft_combine.csv")
 attach(data)
-col <- na.omit(Vertical..No.Step.Reach.)
+col <- na.omit(Sprint)
 mean <- mean(col)
 mean
