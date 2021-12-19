@@ -24,6 +24,10 @@ A simple vista, parecen ser considerablemente parecidos los datos, de modo que, 
 
 
 
+
+
+
+
 ![Alt text](./anova/height/anova_height_2.png)
 
 ![Alt text](./anova/height/anova_height_3.png)
@@ -64,15 +68,65 @@ De manera parecida al caso anterior, los datos se asemejan bastante. Luego de ha
 
 
 
+
+
+
+
 ![Alt text](./anova/vertical_max_reach/anova_max_reach_2.png)
 
 ![Alt text](./anova/vertical_max_reach/anova_max_reach_3.png)
 
 Al observar las gráficas anteriores, vemos que la normalidad de los residuos en esta ocasión es bastante discutible, aún así, realizaremos las tres pruebas de hipótesis como ya es costumbre(aunque baste con que una de ellas falle):
 
-1) los $e_{ij}$ **no** siguen una distribución normal: p-value = 0.003 $\ll$ 0.05, podemos decir entonces que están normalmente distribuidos.
+1) los $e_{ij}$ **no** siguen una distribución normal: p-value = 0.003 $\ll$ 0.05, luego los residuos no están normalmente distribuidos.
 
-2) los $e_{ij}$ son independientes: p-value = 0.49 $\gg$ 0.05, por lo que los errores son independientes.
+2) los $e_{ij}$ son independientes: p-value = 0.49 $\gg$ 0.05, los errores son independientes.
 
 3) los $e_{ij}$ tienen la misma varianza: p-value = 0.48 $\gg$ 0.05, las varianzas de los residuos son homogéneas.
+
+
+
+
+
+
+
+
+
+#### Weight
+
+Analizemos en esta ocasión el peso de los jugadores.
+
+Nuestra misión ahora será saber si existen diferencias entre el peso de los jugadores de la nba en los años 2012, **2014** y 2015
+
+$H_0: \mu_{2012}=\mu_{2014}=\mu_{2015}$
+
+$H_a:\mu_i\ne\mu_j,~~i\ne j$
+
+
+
+Como es costumbre, veamos la gráfica de los datos
+
+![Alt text](./anova/weight/anova_weight_1.png)
+
+En esta ocasión, vemos una diferencia ligera, pero notable, de los datos del 2012 respecto a los demás años. Luego de hacer el **análisis de varianza**, tenemos que el p-value 0.02 < 0.05, rechazando $H_0$, luego el peso de los jugadores de la **NBA** en los años estudiados ha cambiado.
+
+
+
+
+
+
+
+![Alt text](./anova/weight/anova_weight_2.png)
+
+![Alt text](./anova/weight/anova_weight_3.png)
+
+Viendo las gráficas, nuevamente la normalidad de los residuos es dudosa. Realizando las pruebas de hipótesis de Shapiro, Durbin-Watson y Bartlett  respectivamente tenemos:
+
+1) los $e_{ij}$ siguen una distribución normal: p-value = 0.054 > 0.050, podemos decir entonces que están normalmente distribuidos para la tolerancia del 5%.
+
+2) los $e_{ij}$ son independientes: p-value = 0.19 > 0.05, por lo que los errores son independientes.
+
+3) los $e_{ij}$ tienen la misma varianza: p-value = 0.97 $\gg$ 0.05, las varianzas de los residuos son homogéneas.
+
+
 
