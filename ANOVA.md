@@ -130,3 +130,47 @@ Viendo las gráficas, nuevamente la normalidad de los residuos es dudosa. Realiz
 
 
 
+
+
+
+
+
+
+#### Sprint
+
+Por último, hagamos un último análisis de varianza, en este caso para la velocidad de los jugadores.
+
+Deseamos saber si la velocidad de los jugadores de la nba ha cambiado en los años 2012, **2014** y 2015
+
+$H_0: \mu_{2012}=\mu_{2014}=\mu_{2015}$
+
+$H_a:\mu_i\ne\mu_j,~~i\ne j$
+
+
+
+Viendo la gráfica de los datos, tenemos
+
+![Alt text](./anova/sprint/anova_sprint_1.png)
+
+Nuevamente, vemos una leve diferencia de los datos del 2012 respecto al resto. Haciendo entonces el **análisis de varianza**, tenemos que el p-value 0.03 < 0.05, rechazando $H_0$, luego las velocidades de los jugadores de la **NBA** difieren en los años estudiados.
+
+
+
+
+
+
+
+![Alt text](./anova/sprint/anova_sprint_2.png)
+
+![Alt text](./anova/sprint/anova_sprint_3.png)
+
+En este último análisis, nos volvemos a enfrentar con la dubitativa de la normalidad de los residuos, si bien en esta ocasión la gráfica habla por si sola. Aún así, haremos las pruebas de hipótesis de Shapiro, Durbin-Watson y Bartlett  respectivamente tenemos:
+
+1) los $e_{ij}$ **no** siguen una distribución normal: p-value = 0.0001 $\ll$ 0.05, luego los residuos no están normalmente distribuidos
+
+2) los $e_{ij}$ son independientes: p-value = 0.39 $\gg$ 0.05, por lo que los errores son independientes.
+
+3) los $e_{ij}$ tienen la misma varianza: p-value = 0.28 $\gg$ 0.05, las varianzas de los residuos son homogéneas.
+
+
+
