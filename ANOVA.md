@@ -38,3 +38,41 @@ Verificando finalmente los supuestos del modelo realizando las pruebas de hipót
 
 
 
+
+
+
+
+
+
+#### Vertical (Max Reach)
+
+A continuación, analizamos el alcance  vertical máximo.
+
+Se desea entonces saber si existen diferencias entre el alcance máximo de los jugadores de la nba en los años 2012, **2014** y 2015
+
+$H_0: \mu_{2012}=\mu_{2014}=\mu_{2015}$
+
+$H_a:\mu_i\ne\mu_j,~~i\ne j$
+
+
+
+Al graficar los resultados podemos observar:
+
+![Alt text](./anova/height/anova_height_1.png)
+
+A simple vista, parecen ser considerablemente parecidos los datos, de modo que, según cual sea la tolerancia con la cual trabajemos, se rechazará o no nuestra hipótesis nula. Al realizar el **análisis de varianza**, tenemos que el p-value 0.28 > 0.05, aceptando entonces $H_0$, la altura de los jugadores de la nba en los años 2012, 2014 y 2015 son muy similares.
+
+
+
+![Alt text](./anova/height/anova_height_2.png)
+
+![Alt text](./anova/height/anova_height_3.png)
+
+Verificando finalmente los supuestos del modelo realizando las pruebas de hipótesis de Shapiro, Durbin-Watson y Bartlett  respectivamente:
+
+1) los $e_{ij}$ siguen una distribución normal: p-value = 0.43 $\gg$ 0.05, podemos decir entonces que están normalmente distribuidos.
+
+2) los $e_{ij}$ son independientes: p-value = 0.14 > 0.05, por lo que los errores son independientes.
+
+3) los $e_{ij}$ tienen la misma varianza: p-value = 0.92 $\gg$ 0.05, las varianzas de los residuos son homogéneas.
+
