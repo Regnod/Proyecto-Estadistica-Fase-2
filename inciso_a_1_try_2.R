@@ -1,4 +1,4 @@
-data <- read.csv("./2014_nba_draft_combine.csv")
+data <- read.csv("./2014_nba_draft_combine_fixed.csv")
 data$X <- NULL
 data$Year <- NULL
 data$Player <- NULL
