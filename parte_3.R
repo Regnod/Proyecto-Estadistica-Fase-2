@@ -1,4 +1,4 @@
-data <- read.csv("2014_nba_draft_combine_fixed.csv")
+data <- read.csv("2014_nba_draft_combine.csv")
 data$X <- NULL
 data$Year <- NULL
 data$Player <- NULL
@@ -13,7 +13,7 @@ acp <- prcomp(data, scale=TRUE)
 summary(acp)
 # layout(matrix(c(1,1,2,2),2,2,byrow=T))
 # plot(acp)
-biplot(acp)
+# biplot(acp)
 acp$rotation
 data.std <- scale(data)
 data.std <- data.frame(data.std)
@@ -37,10 +37,18 @@ d2.c <- as.dendrogram(fit.c)
 # rect.hclust(fit.c, k=6, border = "red")
 
 # kmeans
+<<<<<<< HEAD
+<<<<<<<< HEAD:parte_3.R
 fit.k1 <-kmeans(data, 6)
+========
+fit.k1 <-kmeans(data.std, 3)
+>>>>>>>> 9a5d2b8ca39ea6d8f836fb68363aa43484f482e0:inciso a parte 1/parte_3.R
+=======
+fit.k1 <-kmeans(data.std, 3)
+>>>>>>> 9a5d2b8ca39ea6d8f836fb68363aa43484f482e0
 fit.k1
-# library(factoextra)
-# fviz_cluster(fit.k1, data = data.std)
+library(factoextra)
+fviz_cluster(fit.k1, data = data.std)
 # plot(data.std)
 # plot(data.std, col = fit.k1$cluster, lwd=2)
 # # arreglar los nombres estos
