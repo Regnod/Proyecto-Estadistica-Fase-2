@@ -37,7 +37,7 @@ d2.c <- as.dendrogram(fit.c)
 # rect.hclust(fit.c, k=6, border = "red")
 
 # kmeans
-fit.k1 <-kmeans(data.std, 6)
+fit.k1 <-kmeans(data, 6)
 fit.k1
 # library(factoextra)
 # fviz_cluster(fit.k1, data = data.std)
