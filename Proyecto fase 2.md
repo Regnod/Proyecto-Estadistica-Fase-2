@@ -22,9 +22,7 @@ Partiendo de los datos de las mediciones físicas de los jugadores de la NBA, se
 
 
 
-### Introducción
-
-La ***National Basketball Association***(NBA) cuenta cada año con discímiles aspirantes a unirse a uno de los equipos y probar su capacidad y talento a nivel profesional. Para ello se realiza anualmente hace más de medio siglo un evento conocido como el **NBA draft pick**, donde dichos equipos escogen a qué jugadores incorporar a sus bancas de todos aquellos posibles candidatos. El análisis que proponemos a continuación está basado en los datos recogidos de dicho *draft pick* en el año 2014. Los datos consisten en las aptitudes físicas cuantificadas para cada uno de los candidatos considerados, por ejemplo su altura, su peso y grasa corporal, altura de salto, envergadura de las extremidades, entre otros. Se realizará un análisis de varianza(ANOVA) entre los datos recogidos en el 2014, 2012 y 2015, para contrastar las variaciones de las capacidades de los atletas. También haremos una clasificación 
+### Introducci
 
 
 
