@@ -1,21 +1,40 @@
+# Proyecto Estadística Descriptiva 
+
+## Fase 2
 
 
-### Proyecto Estadística Descriptiva fase 2
 
-C-412 Richard Garcı́a De la Osa.
-richard.garcia@estudiantes.matcom.uh.cu
-C-412 Andy A. Castañeda Guerra.
-andy.castaneda@estudiantes.matcom.uh.cu
-C-411 Adrian Hernández Pérez.
-a.hernandez3@estudiantes.matcom.uh.cu
+## Integrantes:
 
-##### Inciso a, parte 1:
+* C-412 Richard Garcı́a De la Osa. richard.garcia@estudiantes.matcom.uh.cu
+* C-412 Andy A. Castañeda Guerra. andy.castaneda@estudiantes.matcom.uh.cu
+* C-411 Adrián Hernández Pérez. a.hernandez3@estudiantes.matcom.uh.cu
+
+##### 
+
+### Abstract:
+
+Un breve análisis estadístico sobre los jugadores del draft de la NBA del año 2014.
+
+Partiendo de los datos de las mediciones físicas de los jugadores de la NBA, se realizaron varios análisis sobre los mismos, en aras de caracterizar y hallar relaciones entre las mismas. Se consideraron técnicas de reducción de dimensión, análisis de varianza y correlación entre los datos.
+
+
+
+
+
+### Introducción
+
+La ***National Basketball Association***(NBA) cuenta cada año con discímiles aspirantes a unirse a uno de los equipos y probar su capacidad y talento a nivel profesional. Para ello se realiza anualmente hace más de medio siglo un evento conocido como el **NBA draft pick**, donde dichos equipos escogen a qué jugadores incorporar a sus bancas de todos aquellos posibles candidatos. El análisis que proponemos a continuación está basado en los datos recogidos de dicho *draft pick* en el año 2014. Los datos consisten en las aptitudes físicas cuantificadas para cada uno de los candidatos considerados, por ejemplo su altura, su peso y grasa corporal, altura de salto, envergadura de las extremidades, entre otros. Se realizará un análisis de varianza(ANOVA) entre los datos recogidos en el 2014, 2012 y 2015, para contrastar las variaciones de las capacidades de los atletas. También haremos una clasificación 
+
+
+
+
 
 Tabla de correlación de las variables.
 
 ![drag-img](./inciso a parte 1/matriz de correlacion/matriz.png)
 
-Podemos ver que existe dependencia lineal entre las variables.
+Se aprecia que existe dependencia lineal entre las variables.
 
 
 
@@ -413,3 +432,10 @@ En este último análisis, nos volvemos a enfrentar con la dubitativa de la norm
 
 
 
+
+
+
+
+### Conclusión
+
+Luego de este extenso análisis de los datos con los que contábamos, en el cual profundizamos los conocimientos adquiridos a lo largo del curso para el tratamiento de los datos, logramos obtener **información**, encontrar conexiones invisibles entre lo que a simple vista son números, y en general lograr un mejor entendimiento del objeto de estudio. Se analizó la correlación(directa, inversa o inexistente) entre distintas medidas físicas de jugadores de la NBA en el año 2014. Igualmente, se aplicaron técnicas de clasificación para reducción de dimensión, clasificando a los jugadores en categorías similares según los datos, y se culminó realizando un análisis a mayor escala, considerando datos de años anteriores y posteriores con tal de contrastar y realizar un análisis de varianza(ANOVA) efectivo sobre distintas categorías como la agilidad, el peso, la altura y la altura de salto de los deportitas.
