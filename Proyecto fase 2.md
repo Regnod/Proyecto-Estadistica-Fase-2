@@ -30,7 +30,7 @@ La ***National Basketball Association***(NBA) cuenta cada año con discímiles a
 
 
 
-
+#################### poner el titulo de esta parte y corregir las frases q parecen ctrl-v, x ej la del final de cada análisis, also poner un tin más de texto explicando que se concluye de cada análisis.
 
 Tabla de correlación de las variables.
 
