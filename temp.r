@@ -22,11 +22,11 @@ data2014$Bench <- NULL
 
 
 ## kmeans
-km <- kmeans(data2014, 6)
+km <- kmeans(data2014, 3)
 data2014.std <- data.frame(scale(data2014))
 
-library(factoextra)
-fviz_cluster(km, data = data2014.std)
+# library(factoextra)
+# fviz_cluster(km, data = data2014.std)
 # print(km)
 # plot(data2014, col=km$cluster)
 # plot(data2014$Vertical..Max.Reach., data2014$Weight, col=km$cluster)
