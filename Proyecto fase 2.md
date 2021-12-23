@@ -250,7 +250,7 @@ De estos datos, cabe resaltar algunas observaciones suficientemente llamativas:
 
 
 
-En la figura se observa la representación gráfica de los datos estandarizados, por categorías, reflejándose que una de las categorías, la de los jugadores más
+En la figura se observa la representación gráfica de los datos estandarizados, por categorías, reflejándose que la categoría **1**, de los jugadores corpulentos, es menor en tamaño que la de los jugadores tamaño promedio pertenecientes a la **3**, y que los jugadores más pequeños son realmente la minoría de entre la población analizada, siendo el reducido grupo de la categoría **2**. Esto coincide con los resultados que obtuvimos al escribir en la consola la cardinalidad de cada uno de los conjuntos disjuntos creados, donde la categoría **3** comprendía 25 jugadores, la **2** con 21 jugadores un poco por detrás, y finalmente la categoría **3** con 12 jugadores solamente.
 
 
 
