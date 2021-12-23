@@ -1,16 +1,16 @@
-# Proyecto Estadística Descriptiva 
+# Proyecto Estadística Descriptiva
 
-## Fase 2
-
-
-
-## Integrantes:
-
-* C-412 Richard Garcı́a De la Osa. richard.garcia@estudiantes.matcom.uh.cu
-* C-412 Andy A. Castañeda Guerra. andy.castaneda@estudiantes.matcom.uh.cu
-* C-411 Adrián Hernández Pérez. a.hernandez3@estudiantes.matcom.uh.cu
+### Fase 2
 
 
+
+#### Integrantes:
+
+C-412 Richard Garcı́a De la Osa. richard.garcia@estudiantes.matcom.uh.cu
+
+C-412 Andy A. Castañeda Guerra. andy.castaneda@estudiantes.matcom.uh.cu
+
+C-411 Adrián Hernández Pérez. a.hernandez3@estudiantes.matcom.uh.cu
 
 ### Abstract:
 
@@ -18,29 +18,23 @@ Un breve análisis estadístico sobre los jugadores del draft de la NBA del año
 
 Partiendo de los datos de las mediciones físicas de los jugadores de la NBA, se realizaron varios análisis sobre los mismos, en aras de caracterizar y hallar relaciones entre las mismas. Se consideraron técnicas de reducción de dimensión, análisis de varianza y correlación entre los datos.
 
-
-
-
-
 ### Introducción
 
-La ***National Basketball Association***(NBA) cuenta cada año con discímiles aspirantes a unirse a uno de los equipos y probar su capacidad y talento a nivel profesional. Para ello se realiza anualmente hace más de medio siglo un evento conocido como el **NBA draft pick**, donde dichos equipos escogen a qué jugadores incorporar a sus bancas de todos aquellos posibles candidatos. El análisis que proponemos a continuación está basado en los datos recogidos de dicho *draft pick* en el año 2014. Los datos consisten en las aptitudes físicas cuantificadas para cada uno de los candidatos considerados, por ejemplo su altura, su peso y grasa corporal, altura de salto, envergadura de las extremidades, entre otros. Primeramente haremos un análisis de la relación entre las variables con las que se trabaja mediante regresión lineal múltiple. También incurrimos en un análisis de varianza(ANOVA) entre los datos recogidos en el 2014, 2012 y 2015, para contrastar las variaciones de las capacidades de los atletas. Además, se hará una clasificación de los jugadores por categorías para reducir la dimensión de los datos.
+La ***National Basketball Association***(NBA) cuenta cada año con discímiles aspirantes a unirse a uno de los equipos y probar su capacidad y talento a nivel profesional. Para ello se realiza anualmente hace más de medio siglo un evento conocido como el *NBA draft pick*, donde dichos equipos escogen a qué jugadores incorporar a sus bancas de todos aquellos posibles candidatos. El análisis que proponemos a continuación está basado en los datos recogidos de dicho *draft pick* en el año 2014. Los datos consisten en las aptitudes físicas cuantificadas para cada uno de los candidatos considerados, por ejemplo su altura, su peso y grasa corporal, altura de salto, envergadura de las extremidades, entre otros. Primeramente haremos un análisis de la relación entre las variables con las que se trabaja mediante regresión lineal múltiple. También incurrimos en un análisis de varianza(ANOVA) entre los datos recogidos en el 2012, 2014 y 2015, para contrastar las variaciones de las capacidades de los atletas. Además, se hará una clasificación de los jugadores por categorías para reducir la dimensión de los datos.
 
+### Regresión
 
+Partiendo de los datos del draft de los jugadores de la NBA del año 2014, se desea hacer el análisis de regresión sobre los datos de estudio.
 
-
-
-#################### poner el titulo de esta parte y corregir las frases q parecen ctrl-v, x ej la del final de cada análisis, also poner un tin más de texto explicando que se concluye de cada análisis.
+La variable a la que le aplicaremos esta técnica será Vertical (Max Reach), pues consideramos que es una de las más importantes entre los datos con los que se trabaja. El objetivo es encontrar un modelo el cual represente la mejor combinación para explicar el comportamiento de la variable dependiente. 
 
 Tabla de correlación de las variables.
 
 ![drag-img](./inciso a parte 1/matriz de correlacion/matriz.png)
 
-Se aprecia que existe dependencia lineal entre las variables.
+Dado que se aprecia que existen valores bastante altos en algunos de los pares de variables, podemos decir que existe  dependencia lineal entre estas variables.
 
 
-
-__Modelo encontrado con todas las variables:__
 
 __Modelo:__
 
@@ -50,9 +44,9 @@ __Modelo:__
 
 
 
-​	Podemos ver que el valor del intercepto es alto, esto indica que gran parte del Vertical (Max Reach) no está muy bien explicada a partir de las variables independientes, lo cual no es muy deseable. Además notamos que los valores de Pr(>|t|) para todas son menores que 0.05.
+​	Podemos ver que el valor del intercepto es alto, esto indica que gran parte del Vertical (Max Reach) no está muy bien explicada a partir de las variables independientes, lo cual no es deseable. Además notamos que los valores de Pr(>|t|) para todas son menores que 0.05.
 
-​	De estos valores podemos ver que el R-squared es 0.8582 que está por encima de 0.70 por lo que indica que el modelo es bueno, sumando esto a que el valor del intercepto es malo podría indicar que necesitamos considerar otros factores. También podemos notar que el p-value es menor que 0.05 lo que indica que nuestro modelo no está mal.
+​	De estos valores podemos ver que el R-squared es 0.8582, que está por encima de 0.70 y como el p-value es menor que 0.05 todo parece indicar que nuestro modelo está bien. Dado que el valor del intercepto es alto se podría decir que necesitamos considerar otros factores en el análisis.
 
 Analizando los Residuos:
 
@@ -74,7 +68,7 @@ El p-value es 0.8654 > 0.05 por lo que podemos afirmar que los errores son indep
 
 Como el p-value es 0.6145 > 0.05 no podemos rechazar la heterocedasticidad. Por lo que el supuesto de Homocedasticidad se mantiene.
 
-Por lo visto, no se cumplen todos los supuestos del modelo.
+No se cumplen todos los supuestos del modelo.
 
 
 
@@ -88,9 +82,11 @@ $+\beta_5Vertical~(No~Step)+e$.
 
 
 
-​	Podemos ver que el valor del intercepto no es muy alto, esto indica que parte del Vertical (Max Reach) no está muy bien explicada a partir de las variables independientes, lo cual no es muy deseable. Además notamos que los valores de Pr(>|t|) para algunos son menores que 0.05 y para otros mayores.
+​	Podemos apreciar que el valor del intercepto es alto, esto indica que parte del Vertical (Max Reach) no está bien explicada a partir de las variables independientes y esto no es lo ideal. Podemos notar que los valores de Pr(>|t|) para algunos son menores que 0.05 y para otros mayores.
 
-​	De estos valores podemos ver que el R-squared es 0.8865 que está por encima de 0.70 por lo que indica que el modelo es bueno, sumando esto a que el valor del intercepto no es muy bueno podría indicar que necesitamos considerar otros factores. También podemos notar que el p-value es menor que 0.05 lo que indica que nuestro modelo no está mal.
+En esta ocación tenemos el R-squared con valor 0.8865, este es mayor que 0.70 y como el p-value < 0.05 parece indicar que nuestro modelo está bien. Dado que el valor del intercepto es alto podríamos decir que necesitamos considerar otros factores para este análisis.
+
+
 
 Analizando los Residuos:
 
@@ -112,7 +108,7 @@ El p-value es 0.6313 > 0.05 por lo que podemos afirmar que los errores son indep
 
 Como el p-value es 0.6088 > 0.05 no podemos rechazar la heterocedasticidad. Por lo que el supuesto de Homocedasticidad se mantiene.
 
-Por lo visto, no se cumplen todos los supuestos del modelo.
+No se cumplen todos los supuestos del modelo.
 
 
 
@@ -126,9 +122,9 @@ $+\beta_5Vertical~(No~Step)+\beta_6Vertical~(No~Step~Reach)+e$.
 
 
 
-​	Podemos ver que el valor del intercepto es bastante bajo, esto indica que gran parte del Vertical (Max Reach) está muy bien explicada a partir de las variables independientes, lo cual es muy deseable. Además notamos que los valores de Pr(>|t|) para algunos son menores que 0.05 y para otros mayores.
+​	Podemos ver que el valor del intercepto es bastante bajo, esto indica que gran parte del Vertical (Max Reach) está bien explicado a partir de las variables independientes que empleamos, esto resulta ideal. Además notamos que los valores de Pr(>|t|) para algunos son menores que 0.05 y para otros mayores.
 
-​	De estos valores podemos ver que el R-squared es 0.9999 que está por encima de 0.70 y es casi 1 lo que indica que el modelo es muy bueno. También podemos notar que el p-value es menor que 0.05 lo que indica que nuestro modelo está bien.
+Tenemos que el R-squared tiene valor 0.9999, este es mayor que 0.70 y es casi 1. A lo que podemos añadir que el p-value < 0.05, lo que nos deja claro que nuestro modelo es muy bueno. 
 
 Analizando los Residuos:
 
@@ -150,7 +146,7 @@ El p-value es 0.8062 > 0.05 por lo que podemos afirmar que los errores son indep
 
 Como el p-value es 0.2764 > 0.05 no podemos rechazar la heterocedasticidad. Por lo que el supuesto de Homocedasticidad se mantiene.
 
-Por lo visto, no se cumplen todos los supuestos del modelo.
+No se cumplen todos los supuestos del modelo.
 
 
 
@@ -162,9 +158,9 @@ $Vertical~(Max~Reach)=\beta_0+\beta_1Vertical(No~Step~Reach)+\beta_2Vertical~(Ma
 
 
 
-​	Podemos ver que el valor del intercepto no es muy baj, lo que indica que gran parte del Vertical (Max Reach) puede no estar muy bien explicada a partir de las variables independientes, lo cual no es muy deseable. Además notamos que los valores de Pr(>|t|) para uno es menor que 0.05 y para el otro es mayor.
+​	Notamos que el valor del intercepto no es muy bajo, esto que indica que gran parte del Vertical (Max Reach) puede no estar bien explicada a partir de las variables independientes elegidas, esto no es lo ideal. Además notamos que los valores de Pr(>|t|) para unos es menor que 0.05 y para el otro es mayor.
 
-​	De estos valores podemos ver que el R-squared es 0.8914 que está por encima de 0.70 lo que indica que el modelo es bueno. También podemos notar que el p-value es menor que 0.05 lo que indica que nuestro modelo está bien.
+​	Obtenemos un R-squared de valor 0.8914 que está por encima de 0.70. También podemos notar que el p-value es menor que 0.05 lo que indica que nuestro modelo es bueno.
 
 Analizando los Residuos:
 
@@ -186,11 +182,11 @@ El p-value es 0.6693 > 0.05 por lo que podemos afirmar que los errores son indep
 
 Como el p-value es 0.1706 > 0.05 no podemos rechazar la heterocedasticidad. Por lo que el supuesto de Homocedasticidad se mantiene.
 
-Por lo visto, se cumplen todos los supuestos del modelo.
+Se cumplen todos los supuestos del modelo.
 
 
 
-Modelos analizados:
+__Modelos analizados:__
 
 $-Vertical~(Max~Reach) = \beta_0 + \beta_1Standing~reach + \beta_2Vertical~(Max)+e$. No cumple los supuestos, Adjusted R-squared:  0.8582.
 
@@ -209,12 +205,6 @@ El modelo con mejor R-squared ajustado es el de:
 $Vertical~(Max~Reach)=\beta_0+\beta_1Vertical(No~Step~Reach)+\beta_2Vertical~(Max)+e$.
 
 Quedaría $Vertical~Max~Reach)=10.88442+0.86494*Vertical(No~Step~Reach)+0.35319*Vertical~(Max)$.
-
-
-
-
-
-
 
 ### Reducción de dimensión
 
@@ -250,11 +240,10 @@ Acá se observa la clara división entre los jugadores en tres categorías. La c
 De estos datos, cabe resaltar algunas observaciones suficientemente llamativas:
 
 * En primer lugar, los jugadores de menor estatura son aquellos que mayor alcance vertical(Vertical Max) poseen al saltar sin contar la altura extra que le confieren sus brazos, es decir, que al saltar, son los que más elevan sus pies del suelo. Aún así, esto no es suficiente como para ser los de mayor alcance vertical al saltar si se mide la altura a la que se extienden sus brazos(Vertical Max Reach), siendo nuevamente los más modestos en este campo. Esto puede resultar intuitivo si tenemos en cuenta que estos jugadores son aquellos de menor masa y grasa corporal.
+
 * En segundo lugar, las medidas de agilidad y velocidad de los jugadores más corpulentos y de mayor peso y grasa corporal son ligeramente superiores a las de los demás jugadores. Uno esperaría que dado que son más pesados, quizás sean también más "torpes" o lentos, sin embargo, estas medidas en los datos estudiados se mantienen bastante similares para todos los jugadores estudiados, y curiosamente, los jugadores más altos son los más ágiles y veloces, mientras que los más chicos son los menos ágiles y más lentos.
 
-
-
-
+  
 
 ### ANOVA
 
@@ -434,10 +423,6 @@ En este último análisis, nos volvemos a enfrentar con la dubitativa de la norm
 
 
 
-
-
-
-
 ### Conclusión
 
-Luego de este extenso análisis de los datos con los que contábamos, en el cual profundizamos los conocimientos adquiridos a lo largo del curso para el tratamiento de los datos, logramos obtener **información**, encontrar conexiones invisibles entre lo que a simple vista son números, y en general lograr un mejor entendimiento del objeto de estudio. Se analizó la correlación(directa, inversa o inexistente) entre distintas medidas físicas de jugadores de la NBA en el año 2014. Igualmente, se aplicaron técnicas de clasificación para reducción de dimensión, clasificando a los jugadores en categorías similares según los datos, y se culminó realizando un análisis a mayor escala, considerando datos de años anteriores y posteriores con tal de contrastar y realizar un análisis de varianza(ANOVA) efectivo sobre distintas categorías como la agilidad, el peso, la altura y la altura de salto de los deportitas.
+Luego de este extenso análisis de los datos con los que contábamos, en el cual profundizamos los conocimientos adquiridos a lo largo del curso para el tratamiento de los datos, logramos obtener **información**, encontrar conexiones invisibles entre lo que a simple vista son números, y en general lograr un mejor entendimiento del objeto de estudio. Se analizó la correlación(directa, inversa o inexistente) entre distintas medidas físicas de jugadores de la NBA en el año 2014. Igualmente, se aplicaron técnicas de clasificación para reducción de dimensión, clasificando a los jugadores en categorías similares según los datos, y se culminó realizando un análisis a mayor escala, considerando datos de años anteriores y posteriores con tal de contrastar y realizar un análisis de varianza(ANOVA) efectivo sobre distintas categorías como la agilidad, el peso, la altura y la altura de salto de los deportistas.
