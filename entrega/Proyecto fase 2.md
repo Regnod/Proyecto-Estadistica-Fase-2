@@ -12,7 +12,7 @@ C-412 Andy A. Castañeda Guerra. andy.castaneda@estudiantes.matcom.uh.cu
 
 C-411 Adrián Hernández Pérez. a.hernandez3@estudiantes.matcom.uh.cu
 
-<div style="text-align: right"> <a href="https://github.com/Regnod/Proyecto-Estadistica-Fase-2">Github repo</a><div/>
+<div style="text-align: right"> <a href="https://github.com/Regnod/Proyecto-Estadistica-Fase-2/tree/master/entrega">Github repo</a><div/>
 
 ### Abstract:
 
